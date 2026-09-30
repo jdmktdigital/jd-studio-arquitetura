@@ -1642,3 +1642,26 @@ body.modal-open .wa-float { display: none !important; }
   .cta-film-inner { padding-top: 5rem; padding-bottom: 5rem; }
   .cta-film-overlay { background: linear-gradient(180deg, rgba(7, 17, 31, 0.78) 0%, rgba(7, 17, 31, 0.7) 55%, #07111F 100%); }
 }
+
+/* ==========================================================================
+   V2.2 — Direção em quatro quadrantes
+   esquerda: 16:9 em cima, dois verticais embaixo | direita: texto em cima, 16:9 embaixo
+   ========================================================================== */
+.about-photos-container { gap: 1.2rem; align-content: start; }
+.about-right { display: flex; flex-direction: column; gap: 1.2rem; justify-content: space-between; }
+.about-right .about-text-content { padding: 0.5rem 0 0 2rem; }
+.about-right .about-photo-card.card-wide { grid-column: auto; flex: none; }
+
+@media (min-width: 1025px) {
+  .about-grid { grid-template-columns: 1fr 1fr; gap: 1.2rem; align-items: stretch; }
+}
+
+@media (max-width: 1024px) {
+  .about-right .about-text-content { padding: 0; }
+  .about-right { gap: 2rem; }
+}
+
+/* celular: o par de verticais continua lado a lado, como no computador */
+@media (max-width: 480px) {
+  .about-photos-container { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+}
