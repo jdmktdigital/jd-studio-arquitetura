@@ -45,6 +45,7 @@
     <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M3 12.5l9 5 9-5M3 16.5l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
     <symbol id="i-plan" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3 10h8v11M11 14h10" fill="none" stroke="currentColor" stroke-width="1.9"/></symbol>
+    <symbol id="i-drag" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </svg>
 
   <!-- Header -->
@@ -58,8 +59,8 @@
         <nav aria-label="Principal">
           <ul class="nav-links">
             <li><a href="#projetos" class="nav-link" data-i18n="nav_projetos">Projetos</a></li>
-            <li><a href="#metodo" class="nav-link" data-i18n="nav_metodo">O método</a></li>
-            <li><a href="#como-funciona" class="nav-link" data-i18n="nav_como">Como funciona</a></li>
+            <li><a href="#antes-depois" class="nav-link" data-i18n="nav_ba">Antes e depois</a></li>
+            <li><a href="#metodo" class="nav-link" data-i18n="nav_metodo">Direção</a></li>
             <li><a href="#contato" class="nav-link" data-i18n="nav_contato">Contato</a></li>
           </ul>
         </nav>
@@ -81,13 +82,14 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- 01 · Hero: um filme de várias cenas ao fundo -->
     <section class="hero" id="hero">
       <div class="hero-bg-video-container">
-        <video class="hero-bg-video" id="hero-video"
-               autoplay loop muted playsinline preload="metadata"
-               disablepictureinpicture disableremoteplayback aria-hidden="true"
-               poster="/posters/hero-moretti.jpg"></video>
+        <div class="hero-media">
+          <video class="hero-bg-video" id="hero-video"
+                 autoplay loop muted playsinline preload="metadata"
+                 disablepictureinpicture disableremoteplayback aria-hidden="true"></video>
+        </div>
         <div class="hero-overlay"></div>
       </div>
 
@@ -118,19 +120,12 @@
           </div>
 
           <div class="hero-bottom-bar">
-            <div class="hero-teaser-miniatures">
-              <a href="#projetos" class="teaser-card">
-                <img class="teaser-thumb" src="/posters/moretti-home.jpg" alt="" width="32" height="32" loading="lazy" decoding="async" />
-                <span>Moretti Home</span>
-              </a>
-              <a href="#projetos" class="teaser-card">
-                <img class="teaser-thumb" src="/posters/soleil-home.jpg" alt="" width="32" height="32" loading="lazy" decoding="async" />
-                <span>Soleil Home</span>
-              </a>
-              <a href="#projetos" class="teaser-card">
-                <img class="teaser-thumb" src="/posters/casa-serena.jpg" alt="" width="32" height="32" loading="lazy" decoding="async" />
-                <span>Casa Serena</span>
-              </a>
+            <div class="hero-scenes" id="hero-scenes">
+              <div class="scene-now">
+                <span class="scene-count" id="scene-count">01 / 06</span>
+                <span class="scene-label" id="scene-label">Solei Home · Chegada</span>
+              </div>
+              <div class="scene-bars" id="scene-bars"></div>
             </div>
 
             <a href="#projetos" class="scroll-indicator-link">
@@ -142,53 +137,96 @@
       </div>
     </section>
 
-    <!-- Projetos -->
+    <!-- 02 · Projetos: vitrine horizontal com os filmes rodando -->
     <section class="section" id="projetos">
       <div class="container">
-        <div class="section-header">
-          <div class="subtitle-badge" data-i18n="proj_badge">Projetos</div>
-          <h2 class="section-title" data-i18n="proj_title">Quatro casas. Nenhuma foi <span class="yellow-text">construída</span>.</h2>
-          <p class="section-description" data-i18n="proj_desc">
-            Filmes de conceito, feitos para mostrar o que a direção faz com um projeto antes da primeira pedra. Toque em uma casa para assistir com som.
-          </p>
+        <div class="block-head">
+          <div class="block-index"><b>02</b><span data-i18n="proj_badge">Projetos</span></div>
+          <div>
+            <h2 class="block-title" data-i18n="proj_title">Quatro casas. Nenhuma foi <span class="yellow-text">construída</span>.</h2>
+            <p class="block-desc" data-i18n="proj_desc">
+              Filmes de conceito, feitos para mostrar o que a direção faz com um projeto antes da primeira pedra. Passe de uma casa à outra e abra o filme para assistir com som.
+            </p>
+          </div>
         </div>
+      </div>
 
-        <p class="grid-notice" data-i18n="grid_notice">
-          Projetos autorais de visualização, produzidos com IA e direção humana para demonstração de portfólio. Não representam obras executadas.
-        </p>
+      <div class="showcase" id="showcase">
+        <div class="showcase-sticky">
+          <div class="showcase-track" id="showcase-track"></div>
+          <div class="showcase-progress" aria-hidden="true"><span id="showcase-bar"></span></div>
+        </div>
+      </div>
 
-        <div class="video-grid" id="video-grid"></div>
-
-        <div class="section-cta">
-          <a class="btn-primary" data-wa="projetos" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
-            <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="proj_cta">Quero um filme assim para o meu projeto</span>
-          </a>
+      <div class="container">
+        <div class="block-foot">
+          <div>
+            <p class="grid-notice" data-i18n="grid_notice">
+              Projetos autorais de visualização, produzidos com IA e direção humana para demonstração de portfólio. Não representam obras executadas.
+            </p>
+            <a class="btn-primary" data-wa="projetos" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="proj_cta">Quero um filme assim para o meu projeto</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Método / direção -->
-    <section class="section section-alt" id="metodo">
+    <!-- 03 · Antes e depois interativo -->
+    <section class="section section-alt" id="antes-depois">
+      <div class="container">
+        <div class="ba-grid">
+          <div class="ba-text">
+            <div class="block-index"><b>03</b><span data-i18n="ba_badge">Percepção de valor</span></div>
+            <h2 class="block-title" data-i18n="ba_title">Mesmo imóvel. Outra <span class="yellow-text">percepção</span>.</h2>
+            <p class="block-desc" data-i18n="ba_desc">
+              Arraste e veja a Villa Maris ir da obra bruta à casa ambientada. É o mesmo espaço, no mesmo enquadramento.
+            </p>
+            <div class="ba-tabs" role="group" aria-label="Ambiente">
+              <button class="ba-tab active" type="button" data-pair="living" aria-pressed="true" data-i18n="ba_tab_living">Living</button>
+              <button class="ba-tab" type="button" data-pair="hall" aria-pressed="false" data-i18n="ba_tab_hall">Hall</button>
+            </div>
+            <a class="btn-primary" data-wa="ba" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="ba_cta">Quero ver isso no meu projeto</span>
+            </a>
+          </div>
+
+          <div class="ba" id="ba">
+            <img id="ba-after" src="/antes-depois/living-depois.webp" alt="Villa Maris — living ambientado" width="900" height="1600" loading="lazy" decoding="async" />
+            <img id="ba-before" class="ba-before" src="/antes-depois/living-antes.webp" alt="Villa Maris — living em obra bruta" width="900" height="1600" loading="lazy" decoding="async" />
+            <span class="ba-tag ba-tag-before" data-i18n="ba_before">Antes</span>
+            <span class="ba-tag ba-tag-after" data-i18n="ba_after">Depois</span>
+            <div class="ba-handle" aria-hidden="true">
+              <span class="ba-knob"><svg class="icon"><use href="#i-drag"/></svg></span>
+            </div>
+            <input class="ba-range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Direção -->
+    <section class="section" id="metodo">
       <div class="container">
         <div class="about-grid">
           <div class="about-photos-container">
-            <div class="about-photo-card card-wide">
-              <img src="/fotos/pedra.webp" alt="Parede de pedra bruta e banco de madeira voltados para o jardim — Moretti Home" loading="lazy" decoding="async" />
+            <div class="about-photo-card card-wide" style="background-image: url('/fotos/pedra.webp')" role="img" aria-label="Parede de pedra bruta e banco de madeira voltados para o jardim — Moretti Home">
+              <video class="lazy-loop" muted loop playsinline preload="none" data-src="/videos/met-pedra.mp4" aria-hidden="true"></video>
             </div>
-            <div class="about-photo-card card-portrait">
-              <img src="/fotos/mao.webp" alt="Mão pousada no braço de uma poltrona de veludo verde — Moretti Home" loading="lazy" decoding="async" />
+            <div class="about-photo-card card-portrait" style="background-image: url('/fotos/mao.webp')" role="img" aria-label="Mão pousada no braço de uma poltrona de veludo verde — Moretti Home">
+              <video class="lazy-loop" muted loop playsinline preload="none" data-src="/videos/met-mao.mp4" aria-hidden="true"></video>
             </div>
-            <div class="about-photo-card card-portrait">
-              <img src="/fotos/banho.webp" alt="Bancada de travertino com oliveira em vaso de pedra — Soleil Home" loading="lazy" decoding="async" />
+            <div class="about-photo-card card-portrait" style="background-image: url('/fotos/banho.webp')" role="img" aria-label="Bancada de travertino com oliveira em vaso de pedra — Solei Home">
+              <video class="lazy-loop" muted loop playsinline preload="none" data-src="/videos/met-banho.mp4" aria-hidden="true"></video>
             </div>
-            <div class="about-photo-card card-wide">
-              <img src="/fotos/travertino.webp" alt="Luz rasante sobre bancada de travertino e marcenaria — Moretti Home" loading="lazy" decoding="async" />
+            <div class="about-photo-card card-wide" style="background-image: url('/fotos/travertino.webp')" role="img" aria-label="Luz rasante sobre bancada de travertino e marcenaria — Moretti Home">
+              <video class="lazy-loop" muted loop playsinline preload="none" data-src="/videos/met-travertino.mp4" aria-hidden="true"></video>
             </div>
           </div>
 
           <div class="about-text-content">
-            <div class="subtitle-badge" data-i18n="met_badge">Direção</div>
-            <h2 class="section-title" data-i18n="met_title">A diferença não está no render. Está na <span class="yellow-text">direção</span>.</h2>
+            <div class="block-index"><b>04</b><span data-i18n="met_badge">Direção</span></div>
+            <h2 class="block-title" data-i18n="met_title">A diferença não está no render. Está na <span class="yellow-text">direção</span>.</h2>
             <p data-i18n="met_p1">Todo escritório tem render. Poucos têm um filme que faz o cliente se imaginar dentro da casa.</p>
             <p data-i18n="met_p2">A direção decide o que aparece primeiro, quanto tempo a luz fica na parede, quando alguém entra em cena e qual música sustenta o silêncio. É isso que transforma um tour em desejo.</p>
             <div>
@@ -224,12 +262,14 @@
       </div>
     </section>
 
-    <!-- Como funciona -->
-    <section class="section" id="como-funciona">
+    <!-- 05 · Como funciona -->
+    <section class="section section-alt" id="como-funciona">
       <div class="container">
-        <div class="section-header">
-          <div class="subtitle-badge" data-i18n="how_badge">Como funciona</div>
-          <h2 class="section-title" data-i18n="how_title">Do arquivo do projeto ao filme <span class="yellow-text">pronto</span>.</h2>
+        <div class="block-head">
+          <div class="block-index"><b>05</b><span data-i18n="how_badge">Como funciona</span></div>
+          <div>
+            <h2 class="block-title" data-i18n="how_title">Do arquivo do projeto ao filme <span class="yellow-text">pronto</span>.</h2>
+          </div>
         </div>
 
         <ol class="steps">
@@ -250,21 +290,23 @@
           </li>
         </ol>
 
-        <div class="section-cta">
-          <a class="btn-primary" data-wa="como" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
-            <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="how_cta">Enviar meu projeto</span>
-          </a>
+        <div class="block-foot">
+          <div>
+            <a class="btn-primary" data-wa="como" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="how_cta">Enviar meu projeto</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA final -->
+    <!-- 06 · Contato -->
     <section class="section" id="contato">
       <div class="container">
         <div class="last-fold-cta-section">
           <img src="/fotos/fachada.webp" alt="" class="last-fold-bg-img" loading="lazy" decoding="async" />
           <div class="last-fold-content">
-            <div class="subtitle-badge" data-i18n="cta_badge">Seu próximo projeto</div>
+            <div class="block-index"><b>06</b><span data-i18n="cta_badge">Seu próximo projeto</span></div>
             <h2 class="last-fold-title" data-i18n="cta_title">Faça seu cliente <span class="yellow-text">sentir</span> o projeto.</h2>
             <p class="last-fold-desc" data-i18n="cta_desc">Conte o que você está projetando e vamos conversar sobre o filme dele.</p>
             <div class="contact-options">
