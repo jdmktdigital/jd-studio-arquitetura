@@ -56,6 +56,10 @@ const translations = {
     pr_3_p: "Imagem e música montadas juntas. O ritmo é o que transforma um tour em vontade de estar lá.",
     pr_4_t: "Fiel ao seu projeto",
     pr_4_p: "Planta, proporção, material e acabamento preservados. A direção muda a percepção, não o projeto.",
+    pr_1_l: "Ver os projetos",
+    pr_2_l: "Ver o antes e depois",
+    pr_3_l: "Assistir com som",
+    pr_4_l: "Enviar meu projeto",
 
     how_badge: "Como funciona",
     how_title: "Do arquivo do projeto ao filme <span class=\"yellow-text\">pronto</span>.",
@@ -141,6 +145,10 @@ const translations = {
     pr_3_p: "Image and music cut together. Rhythm is what turns a walkthrough into wanting to be there.",
     pr_4_t: "True to your project",
     pr_4_p: "Plan, proportion, materials and finishes preserved. Direction changes the perception, not the project.",
+    pr_1_l: "See the projects",
+    pr_2_l: "See the before and after",
+    pr_3_l: "Watch with sound",
+    pr_4_l: "Send my project",
 
     how_badge: "How it works",
     how_title: "From project files to a <span class=\"yellow-text\">finished</span> film.",
@@ -226,6 +234,10 @@ const translations = {
     pr_3_p: "Imagen y música montadas juntas. El ritmo convierte un recorrido en ganas de estar ahí.",
     pr_4_t: "Fiel a tu proyecto",
     pr_4_p: "Planta, proporción, material y acabado preservados. La dirección cambia la percepción, no el proyecto.",
+    pr_1_l: "Ver los proyectos",
+    pr_2_l: "Ver el antes y después",
+    pr_3_l: "Ver con sonido",
+    pr_4_l: "Enviar mi proyecto",
 
     how_badge: "Cómo funciona",
     how_title: "Del archivo del proyecto al film <span class=\"yellow-text\">listo</span>.",
@@ -602,6 +614,13 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+document.querySelectorAll("[data-open]").forEach((btn) =>
+  btn.addEventListener("click", () => {
+    const p = projects.find((x) => x.id === btn.dataset.open);
+    if (p) openModal(p, btn);
+  })
+);
+
 // ---------------------------------------------------------------------------
 // 8. Idioma — persistido e refletido no <html lang>
 // ---------------------------------------------------------------------------
@@ -679,4 +698,4 @@ let saved = null;
 try { saved = localStorage.getItem(LANG_KEY); } catch (_) {}
 initHero();
 setLanguage(saved && translations[saved] ? saved : "pt");
-document.querySelectorAll("#metodo .lazy-loop").forEach(watchLoop);
+document.querySelectorAll("#metodo .lazy-loop, #contato .lazy-loop").forEach(watchLoop);

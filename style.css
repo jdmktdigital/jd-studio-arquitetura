@@ -1255,9 +1255,6 @@ a:focus-visible, button:focus-visible {
 .meta-sound .icon { width: 15px; height: 15px; }
 
 /* Princípios da direção */
-.principles-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 4.5rem; }
-.principles-grid .service-card { padding: 2rem 1.6rem; }
-.principles-grid .service-title { font-size: 1.2rem; }
 
 /* Como funciona — sequência real, por isso numerada */
 .steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
@@ -1328,7 +1325,6 @@ body.modal-open .wa-float { display: none !important; }
 
 @media (max-width: 1024px) {
   .video-grid { grid-template-columns: repeat(2, 1fr); }
-  .principles-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1336,7 +1332,6 @@ body.modal-open .wa-float { display: none !important; }
   .steps { grid-template-columns: 1fr; }
   .video-grid { grid-template-columns: 1fr; }
   .video-preview-wrapper { padding-top: 110%; }
-  .principles-grid { grid-template-columns: 1fr; margin-top: 3rem; }
   .footer-top { flex-direction: column; align-items: flex-start; }
 }
 
@@ -1583,4 +1578,67 @@ body.modal-open .wa-float { display: none !important; }
 @media (max-width: 768px) {
   .hero-media { background-image: url("/posters/hero-seq-vertical.jpg"); }
   .last-fold-content { padding: 3.5rem 1.4rem; }
+}
+
+
+/* ==========================================================================
+   V2.1 — colunas com filete e numeral (sem caixas) + fecho em tela cheia
+   ========================================================================== */
+.tenets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem 2.5rem; margin-top: 5.5rem; }
+.tenet { display: flex; flex-direction: column; gap: 1rem; padding-top: 1.7rem; border-top: 1px solid var(--border-yellow); }
+.tenet-num { font-family: var(--font-heading); font-size: 1.7rem; font-weight: 500; line-height: 1; letter-spacing: 0.06em; color: var(--yellow-accent); }
+.tenet-title { font-size: clamp(1.4rem, 1.9vw, 1.8rem); font-weight: 500; line-height: 1.12; letter-spacing: -0.02em; text-wrap: balance; }
+.tenet p { color: var(--text-medium); font-size: 0.95rem; line-height: 1.7; max-width: 34ch; }
+.tenet-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0.5rem;
+  padding: 0 0 7px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--border-yellow-bright);
+  border-radius: 0;
+  color: var(--yellow-light);
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+.tenet-link .icon { width: 13px; height: 13px; transition: transform 0.2s ease; }
+.tenet-link:hover { color: var(--text-white); border-bottom-color: var(--yellow-accent); }
+.tenet-link:hover .icon { transform: translate(2px, -2px); }
+
+/* Como funciona: mesma linguagem, sem caixas */
+.step { background: none; border: 0; border-radius: 0; padding: 1.7rem 0 0; border-top: 1px solid var(--border-yellow); }
+.step-num { font-size: 1.7rem; font-weight: 500; letter-spacing: 0.06em; margin-bottom: 1rem; }
+.step h3 { font-weight: 500; letter-spacing: -0.02em; }
+.steps { gap: 3rem 2.5rem; }
+
+/* Fecho: o filme ocupa a largura toda e o texto fica por cima */
+.cta-film { position: relative; z-index: 2; min-height: min(88vh, 780px); display: flex; align-items: center; overflow: hidden; background: #07111F; }
+.cta-film-media { position: absolute; inset: 0; background: #07111F center / cover no-repeat; }
+.cta-film-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cta-film-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 17, 31, 0.92) 0%, rgba(7, 17, 31, 0.6) 48%, rgba(7, 17, 31, 0.12) 100%),
+    linear-gradient(180deg, rgba(7, 17, 31, 0.55) 0%, rgba(7, 17, 31, 0) 28%, rgba(7, 17, 31, 0) 70%, #07111F 100%);
+}
+.cta-film-inner { position: relative; padding-top: 7rem; padding-bottom: 7rem; }
+.cta-film-inner .block-index { max-width: 220px; margin-bottom: 1.8rem; }
+.cta-film-title { font-size: clamp(2.6rem, 6vw, 5.2rem); line-height: 1.02; max-width: 14ch; text-wrap: balance; text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5); }
+.cta-film-desc { color: var(--text-light); font-size: 1.15rem; line-height: 1.6; max-width: 46ch; margin: 1.6rem 0 2.6rem; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6); }
+
+@media (max-width: 1100px) { .tenets { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+  .tenets { grid-template-columns: 1fr; gap: 2.4rem; margin-top: 3.5rem; }
+  .tenet p { max-width: none; }
+  .cta-film { min-height: 0; }
+  .cta-film-inner { padding-top: 5rem; padding-bottom: 5rem; }
+  .cta-film-overlay { background: linear-gradient(180deg, rgba(7, 17, 31, 0.78) 0%, rgba(7, 17, 31, 0.7) 55%, #07111F 100%); }
 }

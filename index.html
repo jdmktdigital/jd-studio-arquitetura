@@ -45,6 +45,7 @@
     <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M3 12.5l9 5 9-5M3 16.5l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
     <symbol id="i-plan" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3 10h8v11M11 14h10" fill="none" stroke="currentColor" stroke-width="1.9"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-drag" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </svg>
 
@@ -237,27 +238,31 @@
           </div>
         </div>
 
-        <div class="services-grid principles-grid">
-          <div class="service-card">
-            <div class="service-icon-box"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></div>
-            <h3 class="service-title" data-i18n="pr_1_t">Abre na textura</h3>
-            <p class="service-text" data-i18n="pr_1_p">Pedra, madeira, água. O material aparece antes da fachada — é o que faz sentir antes de entender.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon-box"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></div>
-            <h3 class="service-title" data-i18n="pr_2_t">A luz conta a história</h3>
-            <p class="service-text" data-i18n="pr_2_p">Da luz fria do espaço vazio à luz quente de quando alguém chega. A hora do dia vira narrativa.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon-box"><svg class="icon" aria-hidden="true"><use href="#i-sound"/></svg></div>
-            <h3 class="service-title" data-i18n="pr_3_t">A trilha sustenta o silêncio</h3>
-            <p class="service-text" data-i18n="pr_3_p">Imagem e música montadas juntas. O ritmo é o que transforma um tour em vontade de estar lá.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon-box"><svg class="icon" aria-hidden="true"><use href="#i-plan"/></svg></div>
-            <h3 class="service-title" data-i18n="pr_4_t">Fiel ao seu projeto</h3>
-            <p class="service-text" data-i18n="pr_4_p">Planta, proporção, material e acabamento preservados. A direção muda a percepção, não o projeto.</p>
-          </div>
+        <div class="tenets">
+          <article class="tenet">
+            <span class="tenet-num" aria-hidden="true">I</span>
+            <h3 class="tenet-title" data-i18n="pr_1_t">Abre na textura</h3>
+            <p data-i18n="pr_1_p"></p>
+            <a class="tenet-link" href="#projetos"><span data-i18n="pr_1_l">Ver os projetos</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="tenet">
+            <span class="tenet-num" aria-hidden="true">II</span>
+            <h3 class="tenet-title" data-i18n="pr_2_t">A luz conta a história</h3>
+            <p data-i18n="pr_2_p"></p>
+            <a class="tenet-link" href="#antes-depois"><span data-i18n="pr_2_l">Ver o antes e depois</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="tenet">
+            <span class="tenet-num" aria-hidden="true">III</span>
+            <h3 class="tenet-title" data-i18n="pr_3_t">A trilha sustenta o silêncio</h3>
+            <p data-i18n="pr_3_p"></p>
+            <button class="tenet-link" type="button" data-open="moretti-home"><span data-i18n="pr_3_l">Assistir com som</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </article>
+          <article class="tenet">
+            <span class="tenet-num" aria-hidden="true">IV</span>
+            <h3 class="tenet-title" data-i18n="pr_4_t">Fiel ao seu projeto</h3>
+            <p data-i18n="pr_4_p"></p>
+            <a class="tenet-link" data-wa="como" href="https://wa.me/5541992511523" target="_blank" rel="noopener"><span data-i18n="pr_4_l">Enviar meu projeto</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
         </div>
       </div>
     </section>
@@ -300,24 +305,23 @@
       </div>
     </section>
 
-    <!-- 06 · Contato -->
-    <section class="section" id="contato">
-      <div class="container">
-        <div class="last-fold-cta-section">
-          <img src="/fotos/fachada.webp" alt="" class="last-fold-bg-img" loading="lazy" decoding="async" />
-          <div class="last-fold-content">
-            <div class="block-index"><b>06</b><span data-i18n="cta_badge">Seu próximo projeto</span></div>
-            <h2 class="last-fold-title" data-i18n="cta_title">Faça seu cliente <span class="yellow-text">sentir</span> o projeto.</h2>
-            <p class="last-fold-desc" data-i18n="cta_desc">Conte o que você está projetando e vamos conversar sobre o filme dele.</p>
-            <div class="contact-options">
-              <a class="btn-primary" data-wa="final" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
-                <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="cta_btn_wa">Falar no WhatsApp agora</span>
-              </a>
-              <a class="btn-secondary" href="https://www.instagram.com/jdstudioia/" target="_blank" rel="noopener">
-                <svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg> <span data-i18n="cta_btn_ig">Ver no Instagram</span>
-              </a>
-            </div>
-          </div>
+    <!-- 06 · Contato: filme em tela cheia com o texto por cima -->
+    <section class="cta-film" id="contato">
+      <div class="cta-film-media" style="background-image: url('/posters/cta-fachada.jpg')">
+        <video class="lazy-loop" muted loop playsinline preload="none" data-src="/videos/cta-fachada.mp4" disablepictureinpicture aria-hidden="true"></video>
+      </div>
+      <div class="cta-film-overlay"></div>
+      <div class="container cta-film-inner">
+        <div class="block-index"><b>06</b><span data-i18n="cta_badge">Seu próximo projeto</span></div>
+        <h2 class="cta-film-title" data-i18n="cta_title">Faça seu cliente <span class="yellow-text">sentir</span> o projeto.</h2>
+        <p class="cta-film-desc" data-i18n="cta_desc">Conte o que você está projetando e vamos conversar sobre o filme dele.</p>
+        <div class="contact-options">
+          <a class="btn-primary" data-wa="final" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="cta_btn_wa">Falar no WhatsApp agora</span>
+          </a>
+          <a class="btn-secondary" href="https://www.instagram.com/jdstudioia/" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg> <span data-i18n="cta_btn_ig">Ver no Instagram</span>
+          </a>
         </div>
       </div>
     </section>
