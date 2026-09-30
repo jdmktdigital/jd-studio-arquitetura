@@ -47,7 +47,6 @@ const translations = {
     met_title: "A diferença não está no render. Está na <span class=\"yellow-text\">direção</span>.",
     met_p1: "Todo escritório tem render. Poucos têm um filme que faz o cliente se imaginar dentro da casa.",
     met_p2: "A direção decide o que aparece primeiro, quanto tempo a luz fica na parede, quando alguém entra em cena e qual música sustenta o silêncio. É isso que transforma um tour em desejo.",
-    met_cta: "Conversar sobre o meu projeto",
     pr_1_t: "Abre na textura",
     pr_1_p: "Pedra, madeira, água. O material aparece antes da fachada — é o que faz sentir antes de entender.",
     pr_2_t: "A luz conta a história",
@@ -90,7 +89,6 @@ const translations = {
     wa_hero: "Olá! Quero ver o meu projeto de arquitetura em filme.",
     wa_projetos: "Olá! Vi os projetos no site da JD Studio IA e quero um filme assim para o meu.",
     wa_ba: "Olá! Vi o antes e depois da Villa Maris e quero ver isso no meu projeto.",
-    wa_metodo: "Olá! Quero conversar sobre a direção de um filme para o meu projeto.",
     wa_como: "Olá! Quero enviar o meu projeto para a JD Studio IA.",
     wa_final: "Olá! Quero fazer o meu cliente sentir o projeto. Podemos conversar?",
     wa_modal: "Olá! Vi o filme {name} no site da JD Studio IA e quero um assim para o meu projeto."
@@ -136,7 +134,6 @@ const translations = {
     met_title: "The difference isn't in the render. It's in the <span class=\"yellow-text\">direction</span>.",
     met_p1: "Every studio has renders. Few have a film that makes the client picture themselves inside the house.",
     met_p2: "Direction decides what appears first, how long the light rests on a wall, when someone enters the frame and which music holds the silence. That is what turns a walkthrough into desire.",
-    met_cta: "Talk about my project",
     pr_1_t: "It opens on texture",
     pr_1_p: "Stone, wood, water. The material comes before the facade — it makes people feel before they understand.",
     pr_2_t: "Light tells the story",
@@ -179,7 +176,6 @@ const translations = {
     wa_hero: "Hi! I'd like to see my architecture project as a film.",
     wa_projetos: "Hi! I saw the projects on JD Studio IA's page and I want a film like this for mine.",
     wa_ba: "Hi! I saw the Villa Maris before and after and I want to see that in my project.",
-    wa_metodo: "Hi! I'd like to talk about directing a film for my project.",
     wa_como: "Hi! I'd like to send my project to JD Studio IA.",
     wa_final: "Hi! I want my client to feel the project. Can we talk?",
     wa_modal: "Hi! I watched the {name} film on JD Studio IA's page and I want one like it for my project."
@@ -225,7 +221,6 @@ const translations = {
     met_title: "La diferencia no está en el render. Está en la <span class=\"yellow-text\">dirección</span>.",
     met_p1: "Todo estudio tiene render. Pocos tienen un film que hace que el cliente se imagine dentro de la casa.",
     met_p2: "La dirección decide qué aparece primero, cuánto tiempo la luz se queda en la pared, cuándo alguien entra en escena y qué música sostiene el silencio. Eso convierte un recorrido en deseo.",
-    met_cta: "Hablar sobre mi proyecto",
     pr_1_t: "Abre en la textura",
     pr_1_p: "Piedra, madera, agua. El material aparece antes que la fachada: hace sentir antes de entender.",
     pr_2_t: "La luz cuenta la historia",
@@ -268,7 +263,6 @@ const translations = {
     wa_hero: "¡Hola! Quiero ver mi proyecto de arquitectura en un film.",
     wa_projetos: "¡Hola! Vi los proyectos en la página de JD Studio IA y quiero un film así para el mío.",
     wa_ba: "¡Hola! Vi el antes y después de la Villa Maris y quiero ver eso en mi proyecto.",
-    wa_metodo: "¡Hola! Quiero hablar sobre la dirección de un film para mi proyecto.",
     wa_como: "¡Hola! Quiero enviar mi proyecto a JD Studio IA.",
     wa_final: "¡Hola! Quiero que mi cliente sienta el proyecto. ¿Hablamos?",
     wa_modal: "¡Hola! Vi el film {name} en la página de JD Studio IA y quiero uno así para mi proyecto."
