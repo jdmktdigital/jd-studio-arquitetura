@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>JD Studio IA | Direção Criativa para Arquitetura</title>
+  <meta name="description" content="Filmes de arquitetura que fazem o cliente sentir o projeto antes da obra. Direção de luz, ritmo e trilha. Produção com IA e direção humana." />
+  <meta name="theme-color" content="#07111F" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+
+  <!-- Compartilhamento (WhatsApp, Instagram, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="JD Studio IA" />
+  <meta property="og:title" content="Antes de estar pronto, seu projeto já pode ser vivenciado." />
+  <meta property="og:description" content="Filmes de arquitetura com direção criativa. Seu cliente aprova o que consegue sentir." />
+  <meta property="og:url" content="https://jd-studio-arquitetura.vercel.app/" />
+  <meta property="og:image" content="https://jd-studio-arquitetura.vercel.app/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fontes em paralelo, não por @import no CSS -->
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- Ícones -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.2l3 3 6-6.4" fill="none" stroke="#07111F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 8.5a5 5 0 010 7M18 6a8.5 8.5 0 010 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M3 12.5l9 5 9-5M3 16.5l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+    <symbol id="i-plan" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M3 10h8v11M11 14h10" fill="none" stroke="currentColor" stroke-width="1.9"/></symbol>
+  </svg>
+
+  <!-- Header -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo-brand" aria-label="JD Studio IA — início">
+        <img src="/logo/logo-transparent.png" alt="JD Studio IA" class="logo-img" width="713" height="140" />
+      </a>
+
+      <div class="nav-center" id="nav-center">
+        <nav aria-label="Principal">
+          <ul class="nav-links">
+            <li><a href="#projetos" class="nav-link" data-i18n="nav_projetos">Projetos</a></li>
+            <li><a href="#metodo" class="nav-link" data-i18n="nav_metodo">O método</a></li>
+            <li><a href="#como-funciona" class="nav-link" data-i18n="nav_como">Como funciona</a></li>
+            <li><a href="#contato" class="nav-link" data-i18n="nav_contato">Contato</a></li>
+          </ul>
+        </nav>
+        <div class="lang-selector" role="group" aria-label="Idioma">
+          <button class="lang-btn active" data-lang="pt" type="button" aria-pressed="true">PT</button>
+          <button class="lang-btn" data-lang="en" type="button" aria-pressed="false">EN</button>
+          <button class="lang-btn" data-lang="es" type="button" aria-pressed="false">ES</button>
+        </div>
+      </div>
+
+      <a class="btn-primary header-cta-btn" data-wa="default" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+        <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="btn_whatsapp">Falar no WhatsApp</span>
+      </a>
+
+      <button class="mobile-toggle-btn" id="mobile-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-center">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-video-container">
+        <video class="hero-bg-video" id="hero-video"
+               autoplay loop muted playsinline preload="metadata"
+               disablepictureinpicture disableremoteplayback aria-hidden="true"
+               poster="/posters/hero-moretti.jpg"></video>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="subtitle-badge" data-i18n="hero_badge">Direção Criativa para Arquitetura</div>
+
+          <h1 class="hero-title" data-i18n="hero_headline">
+            Antes de estar pronto, seu projeto já pode ser <span class="yellow-text">vivenciado</span>.
+          </h1>
+
+          <p class="hero-description" data-i18n="hero_sub">
+            O render prova que o projeto existe. O filme faz querer morar nele.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn-primary">
+              <svg class="icon" aria-hidden="true"><use href="#i-play"/></svg> <span data-i18n="hero_btn_projetos">Ver os projetos</span>
+            </a>
+            <a class="btn-secondary" data-wa="hero" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="btn_whatsapp">Falar no WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="hero-badge-strip">
+            <svg class="icon icon-yellow" aria-hidden="true"><use href="#i-check"/></svg>
+            <span data-i18n="hero_strip">Seu cliente aprova o que consegue sentir.</span>
+          </div>
+
+          <div class="hero-bottom-bar">
+            <div class="hero-teaser-miniatures">
+              <a href="#projetos" class="teaser-card">
+                <img class="teaser-thumb" src="/posters/moretti-home.jpg" alt="" width="32" height="32" loading="lazy" decoding="async" />
+                <span>Moretti Home</span>
+              </a>
+              <a href="#projetos" class="teaser-card">
+                <img class="teaser-thumb" src="/posters/soleil-home.jpg" alt="" width="32" height="32" loading="lazy" decoding="async" />
+                <span>Soleil Home</span>
+              </a>
+              <a href="#projetos" class="teaser-card">
+                <img class="teaser-thumb" src="/posters/casa-serena.jpg" alt="" width="32" height="32" loading="lazy" decoding="async" />
+                <span>Casa Serena</span>
+              </a>
+            </div>
+
+            <a href="#projetos" class="scroll-indicator-link">
+              <div class="scroll-mouse-icon"><div class="scroll-wheel"></div></div>
+              <span data-i18n="hero_scroll">Role para ver os projetos</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="section-header">
+          <div class="subtitle-badge" data-i18n="proj_badge">Projetos</div>
+          <h2 class="section-title" data-i18n="proj_title">Quatro casas. Nenhuma foi <span class="yellow-text">construída</span>.</h2>
+          <p class="section-description" data-i18n="proj_desc">
+            Filmes de conceito, feitos para mostrar o que a direção faz com um projeto antes da primeira pedra. Toque em uma casa para assistir com som.
+          </p>
+        </div>
+
+        <p class="grid-notice" data-i18n="grid_notice">
+          Projetos autorais de visualização, produzidos com IA e direção humana para demonstração de portfólio. Não representam obras executadas.
+        </p>
+
+        <div class="video-grid" id="video-grid"></div>
+
+        <div class="section-cta">
+          <a class="btn-primary" data-wa="projetos" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="proj_cta">Quero um filme assim para o meu projeto</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Método / direção -->
+    <section class="section section-alt" id="metodo">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-photos-container">
+            <div class="about-photo-card card-wide">
+              <img src="/fotos/pedra.webp" alt="Parede de pedra bruta e banco de madeira voltados para o jardim — Moretti Home" loading="lazy" decoding="async" />
+            </div>
+            <div class="about-photo-card card-portrait">
+              <img src="/fotos/mao.webp" alt="Mão pousada no braço de uma poltrona de veludo verde — Moretti Home" loading="lazy" decoding="async" />
+            </div>
+            <div class="about-photo-card card-portrait">
+              <img src="/fotos/banho.webp" alt="Bancada de travertino com oliveira em vaso de pedra — Soleil Home" loading="lazy" decoding="async" />
+            </div>
+            <div class="about-photo-card card-wide">
+              <img src="/fotos/travertino.webp" alt="Luz rasante sobre bancada de travertino e marcenaria — Moretti Home" loading="lazy" decoding="async" />
+            </div>
+          </div>
+
+          <div class="about-text-content">
+            <div class="subtitle-badge" data-i18n="met_badge">Direção</div>
+            <h2 class="section-title" data-i18n="met_title">A diferença não está no render. Está na <span class="yellow-text">direção</span>.</h2>
+            <p data-i18n="met_p1">Todo escritório tem render. Poucos têm um filme que faz o cliente se imaginar dentro da casa.</p>
+            <p data-i18n="met_p2">A direção decide o que aparece primeiro, quanto tempo a luz fica na parede, quando alguém entra em cena e qual música sustenta o silêncio. É isso que transforma um tour em desejo.</p>
+            <div>
+              <a class="btn-primary" data-wa="metodo" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="met_cta">Conversar sobre o meu projeto</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-grid principles-grid">
+          <div class="service-card">
+            <div class="service-icon-box"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></div>
+            <h3 class="service-title" data-i18n="pr_1_t">Abre na textura</h3>
+            <p class="service-text" data-i18n="pr_1_p">Pedra, madeira, água. O material aparece antes da fachada — é o que faz sentir antes de entender.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon-box"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></div>
+            <h3 class="service-title" data-i18n="pr_2_t">A luz conta a história</h3>
+            <p class="service-text" data-i18n="pr_2_p">Da luz fria do espaço vazio à luz quente de quando alguém chega. A hora do dia vira narrativa.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon-box"><svg class="icon" aria-hidden="true"><use href="#i-sound"/></svg></div>
+            <h3 class="service-title" data-i18n="pr_3_t">A trilha sustenta o silêncio</h3>
+            <p class="service-text" data-i18n="pr_3_p">Imagem e música montadas juntas. O ritmo é o que transforma um tour em vontade de estar lá.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon-box"><svg class="icon" aria-hidden="true"><use href="#i-plan"/></svg></div>
+            <h3 class="service-title" data-i18n="pr_4_t">Fiel ao seu projeto</h3>
+            <p class="service-text" data-i18n="pr_4_p">Planta, proporção, material e acabamento preservados. A direção muda a percepção, não o projeto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section-header">
+          <div class="subtitle-badge" data-i18n="how_badge">Como funciona</div>
+          <h2 class="section-title" data-i18n="how_title">Do arquivo do projeto ao filme <span class="yellow-text">pronto</span>.</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3 data-i18n="how_1_t">Você envia o projeto</h3>
+            <p data-i18n="how_1_p">Planta, render, modelo 3D ou referência — o que já existir.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3 data-i18n="how_2_t">A direção é aprovada antes</h3>
+            <p data-i18n="how_2_p">Luz, percurso, ritmo e trilha. Você aprova a direção e a imagem-chave antes da produção.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3 data-i18n="how_3_t">Você apresenta</h3>
+            <p data-i18n="how_3_p">Um filme pronto para a reunião com o cliente, o portfólio do escritório e as redes.</p>
+          </li>
+        </ol>
+
+        <div class="section-cta">
+          <a class="btn-primary" data-wa="como" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="how_cta">Enviar meu projeto</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="last-fold-cta-section">
+          <img src="/fotos/fachada.webp" alt="" class="last-fold-bg-img" loading="lazy" decoding="async" />
+          <div class="last-fold-content">
+            <div class="subtitle-badge" data-i18n="cta_badge">Seu próximo projeto</div>
+            <h2 class="last-fold-title" data-i18n="cta_title">Faça seu cliente <span class="yellow-text">sentir</span> o projeto.</h2>
+            <p class="last-fold-desc" data-i18n="cta_desc">Conte o que você está projetando e vamos conversar sobre o filme dele.</p>
+            <div class="contact-options">
+              <a class="btn-primary" data-wa="final" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="cta_btn_wa">Falar no WhatsApp agora</span>
+              </a>
+              <a class="btn-secondary" href="https://www.instagram.com/jdstudioia/" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg> <span data-i18n="cta_btn_ig">Ver no Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#hero" class="logo-brand" aria-label="JD Studio IA — voltar ao topo">
+          <img src="/logo/logo-transparent.png" alt="JD Studio IA" class="logo-img" width="713" height="140" style="height: 38px;" loading="lazy" />
+        </a>
+
+        <nav class="footer-nav" aria-label="Outras áreas">
+          <span data-i18n="footer_outras">Outras áreas</span>
+          <a href="https://ju-studio-moda.vercel.app/" data-i18n="footer_moda">Moda &amp; Acessórios →</a>
+        </nav>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/jdstudioia/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>
+          </a>
+          <a data-wa="default" href="https://wa.me/5541992511523" class="social-icon" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="ai-disclaimer" data-i18n="disclaimer">
+        Todos os projetos desta página são visualizações conceituais criadas pela JD Studio IA com inteligência artificial e direção humana, para demonstração de portfólio. Não representam obras executadas nem constituem informação técnica.
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; 2026 JD Studio IA. <span data-i18n="footer_rights">Todos os direitos reservados.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante (celular) -->
+  <a class="wa-float" data-wa="default" href="https://wa.me/5541992511523" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+
+  <!-- Modal do filme -->
+  <div class="modal-overlay" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modal-close" type="button" aria-label="Fechar vídeo">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+
+      <div class="modal-video-container">
+        <video id="modal-player" controls playsinline></video>
+      </div>
+
+      <div class="modal-info-panel">
+        <div>
+          <div class="modal-video-category" id="modal-category"></div>
+          <h3 class="modal-video-title" id="modal-title"></h3>
+          <p class="modal-sound-hint" id="modal-sound-hint">
+            <svg class="icon" aria-hidden="true"><use href="#i-sound"/></svg>
+            <span data-i18n="modal_sound">Assista com som — a trilha faz parte do filme.</span>
+          </p>
+        </div>
+        <a class="btn-primary" id="modal-cta-btn" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="modal_btn">Quero um filme assim</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
