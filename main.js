@@ -9,6 +9,7 @@ const WA_NUMBER = "5541992511523";
 const translations = {
   pt: {
     nav_projetos: "Projetos",
+    nav_emp: "Empreendimentos",
     nav_ba: "Antes e depois",
     nav_metodo: "Direção",
     nav_contato: "Contato",
@@ -16,8 +17,8 @@ const translations = {
     menu_open: "Abrir menu",
     menu_close: "Fechar menu",
 
-    hero_badge: "Direção Criativa para Arquitetura",
-    hero_headline: "Antes de estar pronto, seu projeto já pode ser <span class=\"yellow-text\">vivenciado</span>.",
+    hero_badge: "Direção Criativa para Arquitetura e Empreendimentos",
+    hero_headline: "Antes de estar pronto, seu projeto já pode ser <span class=\"yellow-text\">vivenciado<span class=\"dot\">.</span></span>",
     hero_sub: "O render prova que o projeto existe. O filme faz querer morar nele.",
     hero_btn_projetos: "Ver os projetos",
     hero_strip: "Seu cliente aprova o que consegue sentir.",
@@ -32,6 +33,15 @@ const translations = {
     meta_trilha: "Com trilha",
     watch_sound: "Assistir com som",
     watch: "Assistir o filme",
+
+    emp_badge: "Empreendimentos",
+    emp_title: "No lançamento, o cliente compra o que consegue <span class=\"yellow-text\">imaginar</span>.",
+    emp_desc: "Do croqui à fachada, das áreas comuns à vida na varanda: o filme faz um empreendimento virar um lugar onde a pessoa já se vê morando.",
+    emp_notice: "Edifícios autorais de visualização, produzidos com IA e direção humana para demonstração de portfólio. Não são empreendimentos à venda nem representam obras registradas.",
+    emp_cta: "Quero um filme assim para o meu empreendimento",
+    emp_featured: "Destaque",
+    emp_master: "master 4K",
+    emp_hd: "Full HD",
 
     ba_badge: "Percepção de valor",
     ba_title: "Mesmo imóvel. Outra <span class=\"yellow-text\">percepção</span>.",
@@ -88,6 +98,7 @@ const translations = {
     wa_default: "Olá! Vim pelo site de arquitetura da JD Studio IA e quero conversar sobre um projeto.",
     wa_hero: "Olá! Quero ver o meu projeto de arquitetura em filme.",
     wa_projetos: "Olá! Vi os projetos no site da JD Studio IA e quero um filme assim para o meu.",
+    wa_emp: "Olá! Vi os empreendimentos no site da JD Studio IA e quero um filme assim para o meu lançamento.",
     wa_ba: "Olá! Vi o antes e depois da Villa Maris e quero ver isso no meu projeto.",
     wa_como: "Olá! Quero enviar o meu projeto para a JD Studio IA.",
     wa_final: "Olá! Quero fazer o meu cliente sentir o projeto. Podemos conversar?",
@@ -96,6 +107,7 @@ const translations = {
 
   en: {
     nav_projetos: "Projects",
+    nav_emp: "Developments",
     nav_ba: "Before & after",
     nav_metodo: "Direction",
     nav_contato: "Contact",
@@ -103,8 +115,8 @@ const translations = {
     menu_open: "Open menu",
     menu_close: "Close menu",
 
-    hero_badge: "Creative Direction for Architecture",
-    hero_headline: "Before it's built, your project can already be <span class=\"yellow-text\">experienced</span>.",
+    hero_badge: "Creative Direction for Architecture and Developments",
+    hero_headline: "Before it's built, your project can already be <span class=\"yellow-text\">experienced<span class=\"dot\">.</span></span>",
     hero_sub: "A render proves the project exists. A film makes people want to live in it.",
     hero_btn_projetos: "See the projects",
     hero_strip: "Your client approves what they can feel.",
@@ -119,6 +131,15 @@ const translations = {
     meta_trilha: "With soundtrack",
     watch_sound: "Watch with sound",
     watch: "Watch the film",
+
+    emp_badge: "Developments",
+    emp_title: "At launch, buyers purchase what they can <span class=\"yellow-text\">imagine</span>.",
+    emp_desc: "From sketch to facade, from shared areas to life on the balcony: the film turns a development into a place where people already see themselves living.",
+    emp_notice: "Original visualization buildings, produced with AI and human direction as a portfolio demonstration. They are not developments for sale nor registered projects.",
+    emp_cta: "I want a film like this for my development",
+    emp_featured: "Featured",
+    emp_master: "4K master",
+    emp_hd: "Full HD",
 
     ba_badge: "Perceived value",
     ba_title: "Same property. A different <span class=\"yellow-text\">perception</span>.",
@@ -175,6 +196,7 @@ const translations = {
     wa_default: "Hi! I found JD Studio IA's architecture page and I'd like to talk about a project.",
     wa_hero: "Hi! I'd like to see my architecture project as a film.",
     wa_projetos: "Hi! I saw the projects on JD Studio IA's page and I want a film like this for mine.",
+    wa_emp: "Hi! I saw the developments on JD Studio IA's page and I want a film like this for my launch.",
     wa_ba: "Hi! I saw the Villa Maris before and after and I want to see that in my project.",
     wa_como: "Hi! I'd like to send my project to JD Studio IA.",
     wa_final: "Hi! I want my client to feel the project. Can we talk?",
@@ -183,6 +205,7 @@ const translations = {
 
   es: {
     nav_projetos: "Proyectos",
+    nav_emp: "Emprendimientos",
     nav_ba: "Antes y después",
     nav_metodo: "Dirección",
     nav_contato: "Contacto",
@@ -190,8 +213,8 @@ const translations = {
     menu_open: "Abrir menú",
     menu_close: "Cerrar menú",
 
-    hero_badge: "Dirección Creativa para Arquitectura",
-    hero_headline: "Antes de estar listo, tu proyecto ya puede ser <span class=\"yellow-text\">vivido</span>.",
+    hero_badge: "Dirección Creativa para Arquitectura y Emprendimientos",
+    hero_headline: "Antes de estar listo, tu proyecto ya puede ser <span class=\"yellow-text\">vivido<span class=\"dot\">.</span></span>",
     hero_sub: "El render prueba que el proyecto existe. El film hace querer vivir en él.",
     hero_btn_projetos: "Ver los proyectos",
     hero_strip: "Tu cliente aprueba lo que puede sentir.",
@@ -206,6 +229,15 @@ const translations = {
     meta_trilha: "Con música",
     watch_sound: "Ver con sonido",
     watch: "Ver el film",
+
+    emp_badge: "Emprendimientos",
+    emp_title: "En el lanzamiento, el cliente compra lo que puede <span class=\"yellow-text\">imaginar</span>.",
+    emp_desc: "Del boceto a la fachada, de las áreas comunes a la vida en el balcón: el film convierte un emprendimiento en un lugar donde la persona ya se ve viviendo.",
+    emp_notice: "Edificios de visualización propios, producidos con IA y dirección humana para demostración de portafolio. No son emprendimientos en venta ni representan obras registradas.",
+    emp_cta: "Quiero un film así para mi emprendimiento",
+    emp_featured: "Destacado",
+    emp_master: "master 4K",
+    emp_hd: "Full HD",
 
     ba_badge: "Percepción de valor",
     ba_title: "Mismo inmueble. Otra <span class=\"yellow-text\">percepción</span>.",
@@ -262,6 +294,7 @@ const translations = {
     wa_default: "¡Hola! Llegué por la página de arquitectura de JD Studio IA y quiero hablar sobre un proyecto.",
     wa_hero: "¡Hola! Quiero ver mi proyecto de arquitectura en un film.",
     wa_projetos: "¡Hola! Vi los proyectos en la página de JD Studio IA y quiero un film así para el mío.",
+    wa_emp: "¡Hola! Vi los emprendimientos en la página de JD Studio IA y quiero un film así para mi lanzamiento.",
     wa_ba: "¡Hola! Vi el antes y después de la Villa Maris y quiero ver eso en mi proyecto.",
     wa_como: "¡Hola! Quiero enviar mi proyecto a JD Studio IA.",
     wa_final: "¡Hola! Quiero que mi cliente sienta el proyecto. ¿Hablamos?",
@@ -305,6 +338,39 @@ const projects = [
       pt: "Mesmo imóvel. Outra percepção.",
       en: "Same property. A different perception.",
       es: "Mismo inmueble. Otra percepción."
+    }
+  }
+];
+
+// Empreendimentos. Formato e áudio medidos com ffprobe: os dois primeiros são 4K (2160×3840) com
+// trilha; o Apto Skyline é Full HD e o arquivo não tem faixa de áudio (a página não promete som).
+// "Verde Alto" é nome provisório: o filme não traz nome gravado.
+const developments = [
+  {
+    id: "verde-alto", name: "Verde Alto", duration: "0:47", sound: true, master4k: true, featured: true,
+    type: { pt: "Torre residencial", en: "Residential tower", es: "Torre residencial" },
+    line: {
+      pt: "Abre no croqui e termina no edifício pronto.",
+      en: "It opens on the sketch and ends on the finished tower.",
+      es: "Abre en el boceto y termina en el edificio terminado."
+    }
+  },
+  {
+    id: "alba", name: "ALBA Edifício", duration: "0:52", sound: true, master4k: true,
+    type: { pt: "Edifício residencial", en: "Residential building", es: "Edificio residencial" },
+    line: {
+      pt: "Da fachada ao fim de tarde na varanda.",
+      en: "From the facade to late afternoon on the balcony.",
+      es: "De la fachada al atardecer en el balcón."
+    }
+  },
+  {
+    id: "apto-skyline", name: "Apto Skyline", duration: "0:33", sound: false, master4k: false,
+    type: { pt: "Unidade decorada", en: "Furnished unit", es: "Unidad decorada" },
+    line: {
+      pt: "Do concreto bruto ao apartamento pronto.",
+      en: "From raw concrete to a finished apartment.",
+      es: "Del concreto en bruto al apartamento terminado."
     }
   }
 ];
@@ -520,6 +586,41 @@ function scrollShowcase() {
 }
 
 // ---------------------------------------------------------------------------
+// 5b. Empreendimentos — cartões com o filme rodando; o primeiro é o destaque
+// ---------------------------------------------------------------------------
+function renderDevelopments() {
+  const grid = document.getElementById("emp-grid");
+  if (!grid) return;
+  grid.innerHTML = "";
+  developments.forEach((d) => {
+    const card = document.createElement("article");
+    card.className = "emp-card" + (d.featured ? " is-featured" : "");
+    const quality = d.master4k ? t("emp_master") : t("emp_hd");
+    const sound = d.sound
+      ? `<span class="meta-sound"><svg class="icon" aria-hidden="true"><use href="#i-sound"/></svg> ${escapeHtml(t("meta_trilha"))}</span>`
+      : "";
+    card.innerHTML = `
+      <button class="emp-thumb" type="button" aria-label="${escapeHtml(d.name)} — ${escapeHtml(d.type[currentLang])}"
+              style="background-image: url('/posters/${d.id}.jpg')">
+        <video class="lazy-loop" muted loop playsinline preload="none"
+               data-src="/videos/prev-${d.id}.mp4" disablepictureinpicture aria-hidden="true"></video>
+        <span class="video-badge">${escapeHtml(d.featured ? t("emp_featured") : d.type[currentLang])}</span>
+        <span class="video-play-overlay"><span class="play-icon-circle"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg></span></span>
+      </button>
+      <div class="emp-info">
+        <div class="video-brand">${escapeHtml(d.type[currentLang])}</div>
+        <h3 class="emp-name">${escapeHtml(d.name)}</h3>
+        <p class="panel-line">${escapeHtml(d.line[currentLang])}</p>
+        <div class="panel-meta"><span>${d.duration}</span><span>9:16 · ${escapeHtml(quality)}</span>${sound}</div>
+      </div>`;
+    const btn = card.querySelector(".emp-thumb");
+    btn.addEventListener("click", () => openModal(d, btn));
+    watchLoop(card.querySelector("video"));
+    grid.appendChild(card);
+  });
+}
+
+// ---------------------------------------------------------------------------
 // 6. Antes e depois
 // ---------------------------------------------------------------------------
 const ba = document.getElementById("ba");
@@ -610,7 +711,7 @@ document.addEventListener("keydown", (e) => {
 
 document.querySelectorAll("[data-open]").forEach((btn) =>
   btn.addEventListener("click", () => {
-    const p = projects.find((x) => x.id === btn.dataset.open);
+    const p = [...projects, ...developments].find((x) => x.id === btn.dataset.open);
     if (p) openModal(p, btn);
   })
 );
@@ -646,6 +747,7 @@ function setLanguage(lang) {
   buildSceneBars();
   paintSceneLabel(Math.max(0, sceneIdx));
   renderShowcase();
+  renderDevelopments();
 }
 
 // ---------------------------------------------------------------------------

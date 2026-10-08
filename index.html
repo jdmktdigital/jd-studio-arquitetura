@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>JD Studio IA | Direção Criativa para Arquitetura</title>
-  <meta name="description" content="Filmes de arquitetura que fazem o cliente sentir o projeto antes da obra. Direção de luz, ritmo e trilha. Produção com IA e direção humana." />
+  <meta name="description" content="Filmes de arquitetura e de empreendimentos que fazem o cliente sentir o projeto antes da obra. Direção de luz, ritmo e trilha. Produção com IA e direção humana." />
   <meta name="theme-color" content="#07111F" />
 
   <link rel="icon" type="image/png" href="/favicon.png" />
@@ -60,6 +60,7 @@
         <nav aria-label="Principal">
           <ul class="nav-links">
             <li><a href="#projetos" class="nav-link" data-i18n="nav_projetos">Projetos</a></li>
+            <li><a href="#empreendimentos" class="nav-link" data-i18n="nav_emp">Empreendimentos</a></li>
             <li><a href="#antes-depois" class="nav-link" data-i18n="nav_ba">Antes e depois</a></li>
             <li><a href="#metodo" class="nav-link" data-i18n="nav_metodo">Direção</a></li>
             <li><a href="#contato" class="nav-link" data-i18n="nav_contato">Contato</a></li>
@@ -96,10 +97,10 @@
 
       <div class="container">
         <div class="hero-content">
-          <div class="subtitle-badge" data-i18n="hero_badge">Direção Criativa para Arquitetura</div>
+          <div class="subtitle-badge" data-i18n="hero_badge">Direção Criativa para Arquitetura e Empreendimentos</div>
 
           <h1 class="hero-title" data-i18n="hero_headline">
-            Antes de estar pronto, seu projeto já pode ser <span class="yellow-text">vivenciado</span>.
+            Antes de estar pronto, seu projeto já pode ser <span class="yellow-text">vivenciado<span class="dot">.</span></span>
           </h1>
 
           <p class="hero-description" data-i18n="hero_sub">
@@ -173,12 +174,36 @@
       </div>
     </section>
 
-    <!-- 03 · Antes e depois interativo -->
+    <!-- 03 · Empreendimentos -->
+    <section class="section" id="empreendimentos">
+      <div class="container">
+        <div class="block-head">
+          <div class="block-index"><b>03</b><span data-i18n="emp_badge">Empreendimentos</span></div>
+          <div>
+            <h2 class="block-title" data-i18n="emp_title">No lançamento, o cliente compra o que consegue <span class="yellow-text">imaginar</span>.</h2>
+            <p class="block-desc" data-i18n="emp_desc">Do croqui à fachada, das áreas comuns à vida na varanda: o filme faz um empreendimento virar um lugar onde a pessoa já se vê morando.</p>
+          </div>
+        </div>
+
+        <div class="emp-grid" id="emp-grid"></div>
+
+        <div class="block-foot">
+          <div>
+            <p class="grid-notice" data-i18n="emp_notice">Edifícios autorais de visualização, produzidos com IA e direção humana para demonstração de portfólio. Não são empreendimentos à venda nem representam obras registradas.</p>
+            <a class="btn-primary" data-wa="emp" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="emp_cta">Quero um filme assim para o meu empreendimento</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Antes e depois interativo -->
     <section class="section section-alt" id="antes-depois">
       <div class="container">
         <div class="ba-grid">
           <div class="ba-text">
-            <div class="block-index"><b>03</b><span data-i18n="ba_badge">Percepção de valor</span></div>
+            <div class="block-index"><b>04</b><span data-i18n="ba_badge">Percepção de valor</span></div>
             <h2 class="block-title" data-i18n="ba_title">Mesmo imóvel. Outra <span class="yellow-text">percepção</span>.</h2>
             <p class="block-desc" data-i18n="ba_desc">
               Arraste e veja a Villa Maris ir da obra bruta à casa ambientada. É o mesmo espaço, no mesmo enquadramento.
@@ -187,12 +212,10 @@
               <button class="ba-tab active" type="button" data-pair="living" aria-pressed="true" data-i18n="ba_tab_living">Living</button>
               <button class="ba-tab" type="button" data-pair="hall" aria-pressed="false" data-i18n="ba_tab_hall">Hall</button>
             </div>
-            <a class="btn-primary" data-wa="ba" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="ba_cta">Quero ver isso no meu projeto</span>
-            </a>
           </div>
 
-          <div class="ba" id="ba">
+          <div class="ba-col">
+            <div class="ba" id="ba">
             <img id="ba-after" src="/antes-depois/living-depois.webp" alt="Villa Maris — living ambientado" width="900" height="1600" loading="lazy" decoding="async" />
             <img id="ba-before" class="ba-before" src="/antes-depois/living-antes.webp" alt="Villa Maris — living em obra bruta" width="900" height="1600" loading="lazy" decoding="async" />
             <span class="ba-tag ba-tag-before" data-i18n="ba_before">Antes</span>
@@ -202,11 +225,15 @@
             </div>
             <input class="ba-range" id="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois" />
           </div>
+            <a class="btn-primary ba-cta" data-wa="ba" href="https://wa.me/5541992511523" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> <span data-i18n="ba_cta">Quero ver isso no meu projeto</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 04 · Direção -->
+    <!-- 05 · Direção -->
     <section class="section" id="metodo">
       <div class="container">
         <div class="about-grid">
@@ -224,7 +251,7 @@
 
           <div class="about-right">
             <div class="about-text-content">
-              <div class="block-index"><b>04</b><span data-i18n="met_badge">Direção</span></div>
+              <div class="block-index"><b>05</b><span data-i18n="met_badge">Direção</span></div>
               <h2 class="block-title" data-i18n="met_title">A diferença não está no render. Está na <span class="yellow-text">direção</span>.</h2>
               <p data-i18n="met_p1">Todo escritório tem render. Poucos têm um filme que faz o cliente se imaginar dentro da casa.</p>
               <p data-i18n="met_p2">A direção decide o que aparece primeiro, quanto tempo a luz fica na parede, quando alguém entra em cena e qual música sustenta o silêncio. É isso que transforma um tour em desejo.</p>
@@ -265,11 +292,11 @@
       </div>
     </section>
 
-    <!-- 05 · Como funciona -->
+    <!-- 06 · Como funciona -->
     <section class="section section-alt" id="como-funciona">
       <div class="container">
         <div class="block-head">
-          <div class="block-index"><b>05</b><span data-i18n="how_badge">Como funciona</span></div>
+          <div class="block-index"><b>06</b><span data-i18n="how_badge">Como funciona</span></div>
           <div>
             <h2 class="block-title" data-i18n="how_title">Do arquivo do projeto ao filme <span class="yellow-text">pronto</span>.</h2>
           </div>
@@ -303,14 +330,14 @@
       </div>
     </section>
 
-    <!-- 06 · Contato: filme em tela cheia com o texto por cima -->
+    <!-- 07 · Contato: filme em tela cheia com o texto por cima -->
     <section class="cta-film" id="contato">
       <div class="cta-film-media" style="background-image: url('/posters/cta-fachada.jpg')">
         <video class="lazy-loop" muted loop playsinline preload="none" data-src="/videos/cta-fachada.mp4" disablepictureinpicture aria-hidden="true"></video>
       </div>
       <div class="cta-film-overlay"></div>
       <div class="container cta-film-inner">
-        <div class="block-index"><b>06</b><span data-i18n="cta_badge">Seu próximo projeto</span></div>
+        <div class="block-index"><b>07</b><span data-i18n="cta_badge">Seu próximo projeto</span></div>
         <h2 class="cta-film-title" data-i18n="cta_title">Faça seu cliente <span class="yellow-text">sentir</span> o projeto.</h2>
         <p class="cta-film-desc" data-i18n="cta_desc">Conte o que você está projetando e vamos conversar sobre o filme dele.</p>
         <div class="contact-options">

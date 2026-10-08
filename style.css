@@ -1665,3 +1665,142 @@ body.modal-open .wa-float { display: none !important; }
 @media (max-width: 480px) {
   .about-photos-container { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
 }
+
+/* ==========================================================================
+   V2.3 — abertura no celular: a imagem primeiro
+   Sem selo e sem botões; a headline ganha contraste de tamanho e peso.
+   O computador não muda.
+   ========================================================================== */
+.hero-title .dot { color: var(--text-white); }
+
+@media (max-width: 768px) {
+  .hero { min-height: 100svh; align-items: flex-end; padding-top: 0; padding-bottom: 5.2rem; }
+  .hero .subtitle-badge,
+  .hero .hero-actions { display: none; }
+
+  /* o fundo aparece: mais claro no alto, escuro só onde o texto assenta */
+  .hero-media { filter: brightness(0.92) contrast(1.05); }
+  .hero-overlay {
+    background: linear-gradient(to bottom,
+      rgba(7, 17, 31, 0.5) 0%,
+      rgba(7, 17, 31, 0) 22%,
+      rgba(7, 17, 31, 0) 38%,
+      rgba(7, 17, 31, 0.62) 62%,
+      rgba(7, 17, 31, 0.94) 100%);
+  }
+
+  .hero-content { padding: 0; }
+  .hero-title {
+    font-size: clamp(1.45rem, 6.4vw, 1.9rem);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    margin-bottom: 1rem;
+  }
+  .hero-title .yellow-text {
+    display: block;
+    margin-top: 0.12em;
+    font-size: clamp(3rem, 16.5vw, 4.6rem);
+    font-weight: 900;
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+  }
+  .hero-description { font-size: 1rem; margin-bottom: 1.2rem; }
+  .hero-badge-strip { margin-top: 0; }
+  .hero-bottom-bar { margin-top: 1.4rem; padding-top: 1.1rem; gap: 1.1rem; }
+}
+
+/* Botão do antes e depois: embaixo do comparador, no respiro entre este bloco e o seguinte */
+.ba-col { display: flex; flex-direction: column; align-items: center; gap: 1.6rem; }
+.ba-col .ba-cta { align-self: stretch; justify-content: center; }
+@media (max-width: 900px) { .ba-col { width: 100%; } }
+
+/* "experienced." é a palavra mais longa da abertura: fonte menor só em inglês, para caber em qualquer celular */
+@media (max-width: 768px) {
+  html[lang="en"] .hero-title .yellow-text { font-size: clamp(3rem, 15vw, 4.6rem); }
+}
+
+/* ==========================================================================
+   V2.4 — Empreendimentos: o filme do croqui em destaque, ao lado dos outros dois
+   ========================================================================== */
+.emp-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 1.6rem; align-items: stretch; }
+.emp-card { display: flex; flex-direction: column; gap: 1.1rem; min-width: 0; }
+.emp-thumb {
+  position: relative;
+  display: block;
+  flex: 1;
+  width: 100%;
+  min-height: clamp(430px, 66vh, 580px);
+  padding: 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000 center / cover no-repeat;
+  cursor: pointer;
+  color: inherit;
+  transition: border-color 0.25s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.emp-thumb video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.emp-card.is-featured .emp-thumb { border-color: var(--border-yellow-bright); box-shadow: var(--shadow-brand); }
+.emp-thumb:hover, .emp-thumb:focus-visible { border-color: var(--border-yellow-bright); transform: translateY(-4px); }
+.emp-thumb:hover .video-play-overlay, .emp-thumb:focus-visible .video-play-overlay { opacity: 1; }
+.emp-thumb:hover .play-icon-circle { transform: scale(1); }
+.emp-info .video-brand { margin-bottom: 0.2rem; }
+.emp-name { font-size: clamp(1.5rem, 2.2vw, 2.1rem); line-height: 1.08; margin: 0.15rem 0 0.5rem; }
+.emp-info .panel-line { max-width: 34ch; font-size: 1.02rem; }
+.emp-info .panel-meta { margin: 1rem 0 0; padding-top: 0.8rem; }
+
+@media (max-width: 1024px) {
+  .emp-grid { grid-template-columns: 1fr 1fr; }
+  .emp-card.is-featured { grid-column: 1 / -1; }
+  .emp-card.is-featured .emp-thumb { min-height: clamp(380px, 56vh, 520px); }
+}
+
+/* Celular: três cartões em fileira que se desliza com o dedo */
+@media (max-width: 768px) {
+  .emp-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 1rem; gap: 1rem;
+    margin: 0 -1rem; padding: 0 1rem 0.4rem; scrollbar-width: none; }
+  .emp-grid::-webkit-scrollbar { display: none; }
+  .emp-card, .emp-card.is-featured { flex: 0 0 80vw; scroll-snap-align: start; }
+  .emp-thumb, .emp-card.is-featured .emp-thumb { flex: none; min-height: 0; aspect-ratio: 4 / 5; }
+}
+
+/* Cinco itens no menu: aperta o espaço entre eles em telas médias */
+@media (min-width: 769px) and (max-width: 1180px) {
+  .nav-links { gap: 1.1rem; }
+  .nav-center { gap: 1rem; }
+  .nav-link { font-size: 0.82rem; }
+}
+
+/* Cabeçalho compacto em notebook pequeno e tablet: cinco itens + idioma + WhatsApp numa linha só */
+.nav-link, .header-cta-btn { white-space: nowrap; }
+@media (min-width: 769px) and (max-width: 1180px) {
+  .logo-img { height: 34px; }
+  .nav-container { gap: 0.8rem; }
+  .nav-links { gap: 0.9rem; }
+  .nav-center { gap: 0.7rem; }
+  .nav-link { font-size: 0.78rem; }
+  .lang-selector { padding: 3px 5px; }
+  .lang-btn { padding: 3px 6px; font-size: 0.7rem; }
+  .header-cta-btn { padding: 9px 16px; font-size: 0.78rem; gap: 7px; }
+}
+
+/* Tablet em pé (769–900 px): não cabe menu inteiro + WhatsApp, então usa o menu hambúrguer do celular.
+   O botão do WhatsApp do cabeçalho some, então o flutuante assume. */
+@media (min-width: 769px) and (max-width: 900px) {
+  .mobile-toggle-btn { display: flex; }
+  .nav-center {
+    position: fixed; top: 70px; left: 0; right: 0;
+    background: rgba(7, 17, 31, 0.96); backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--border-yellow);
+    flex-direction: column; padding: 2rem; gap: 1.5rem;
+    transform: translateY(-150%); opacity: 0; pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8); z-index: 99;
+  }
+  .nav-center.mobile-active { transform: translateY(0); opacity: 1; pointer-events: auto; }
+  .nav-links { flex-direction: column; gap: 1.2rem; width: 100%; text-align: center; }
+  .nav-link { font-size: 1.1rem; }
+  .header-cta-btn { display: none; }
+  .wa-float { display: flex; }
+}
